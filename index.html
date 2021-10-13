@@ -1,759 +1,779 @@
 <html lang="tr">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
-    <!-- ./fonts -->
-    <!-- css -->
-    <style type="text/css">
-      * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        box-sizing: border-box;
-      }
-
-      html {
-        height: 100%;
-      }
-
-      html[lang=nl] .sidebar {
-        padding-left: 15px;
-      }
-
-      html[lang=nl] .sidebar--label {
-        display: inline-block;
-        width: 100%;
-        max-width: 106px;
-        margin-top: -2px;
-      }
-
-      html[lang=nl] .sidebar--item-align-right {
-        display: inline-block;
-        margin-right: 10px;
-        width: 60px;
-        text-align: right;
-      }
-
-      body {
-        width: 21cm;
-        height: 100%;
-        min-height: 29.7cm;
-        position: relative;
-        margin: 0;
-        padding: 0 0;
-        color: #333333;
-        line-height: 22px;
-        font: 12px "Helvetica", Arial;
-        font-style: normal;
-      }
-
-      h1 {
-        font-style: normal;
-        font-size: 30px;
-        margin: 0 0 20px 0;
-        padding: 13px 0 15px 0;
-        font-weight: 600;
-        border-bottom: 1px solid #d2d2d2;
-      }
-
-      h1 span {
-        position: relative;
-        font-style: normal;
-        display: inline;
-        margin-right: 1px;
-        padding: 0;
-      }
-
-      h2 {
-        font-size: 17px;
-        font-weight: 600;
-        margin: 0;
-        padding: 0;
-      }
-
-      h3 {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0;
-        padding: 0;
-        max-width: 430px;
-      }
-
-      p {
-        color: #4c4c4c;
-        line-height: 18px;
-        font-weight: 400;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-      }
-
-      hr {
-        border: none;
-        height: 1px;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        background: #d2d2d2;
-      }
-
-      .section--first-name {
-        display: inline-block;
-      }
-
-      .section--last-name {
-        display: inline-block;
-        position: relative;
-        left: 5px;
-      }
-
-      .sections {
-        left: 235px;
-        position: relative;
-        width: 535px;
-      }
-
-      .section {
-        position: relative;
-        width: 100%;
-        padding: 0;
-      }
-
-      .section p {
-        display: block;
-        font-style: normal;
-      }
-
-      .section:last-child {
-        border: none;
-      }
-
-      .section.section--summary {
-        margin-top: -10px;
-      }
-
-      .section--title {
-        display: block;
-        position: relative;
-        z-index: 99;
-        margin: 0 0 0 0;
-        font-weight: 600;
-        background: #fff;
-        padding: 15px 0 15px 0;
-        page-break-inside: avoid;
-        border-bottom: 1px solid #d2d2d2;
-      }
-
-      .section--title span {
-        display: inline-block;
-        margin-right: 0px;
-      }
-
-      .section--heading-group {
-        display: block;
-        padding: 15px 0 0 0;
-        margin: 0;
-        /*page-break-inside: avoid;*/
-      }
-
-      .section--list {
-        display: block;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .section--list.skills {
-        padding-top: 5px;
-        margin-bottom: 10px;
-      }
-
-      .section--item {
-        display: block;
-        position: relative;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .section--item.skills {
-        display: inline-block;
-        padding-top: 8px;
-        padding-bottom: 0;
-        width: 100%;
-        margin: 0;
-        padding-left: 5px;
-      }
-
-      .section--item.skills h3 {
-        font-size: 13px;
-      }
-
-      .section--item.skills:last-child {
-        padding-bottom: 0;
-      }
-
-      .skills--label {
-        display: inline-block;
-        width: 175px;
-        margin: 5px 0 0 -5px;
-      }
-
-      .skills--level {
-        display: inline-block;
-        position: relative;
-        top: 0;
-        height: 7px;
-        width: 150px;
-        padding: 0;
-        margin: 0;
-        background: #eaeaea;
-        border-radius: 6px;
-      }
-
-      .skills--level-filler {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background: #b1b1b1;
-        border-radius: 6px;
-      }
-
-      .skills--stars {
-        display: inline-block;
-        position: relative;
-        top: 4px;
-      }
-
-      .skills--stars svg {
-        fill: #b1b1b1;
-      }
-
-      .skills--stars svg.active {
-        fill: #2b2b38;
-      }
-
-      .section--date {
-        position: absolute;
-        right: 0;
-        text-align: right;
-        top: 16px;
-        width: 125px;
-        width: 142px;
-        font-size: 13px;
-        padding: 0;
-        margin: 0;
-      }
-
-      .section--heading {
-        display: block;
-        padding: 0;
-        margin: 0;
-      }
-
-      .section--sub-heading {
-        display: block;
-        padding: 3px 0 0 0;
-        margin: 0;
-        font-style: italic;
-        font-size: 13px;
-      }
-
-      .section--content {
-        display: block;
-        padding: 5px 0 0 0;
-        margin: 0;
-      }
-
-      .section--content p {
-        display: block;
-      }
-
-      .section--content ul,
-      .section--content ol {
-        white-space: normal;
-        font-weight: 400;
-        list-style-position: outside;
-        color: #4c4c4c;
-        margin: 0;
-        padding: 0 0 0 16px;
-        text-align: left;
-      }
-
-      .section--content ul li,
-      .section--content ol li {
-        line-height: 18px;
-      }
-
-      .section--content ul li strong,
-      .section--content ol li strong {
-        display: inline-block;
-        text-align: left;
-      }
-
-      .section--content ul li {
-        list-style-type: disc;
-      }
-
-      .section--content ol {
-        padding-left: 14px;
-      }
-
-      .section--content-single-textarea {
-        padding-top: 10px;
-      }
-
-      .sidebar--bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 215px;
-        background: #2b2b38;
-        height: 18000px;
-      }
-
-      .sidebar {
-        left: 0;
-        position: absolute;
-        color: #fff;
-        padding: 29px 0 0 20px;
-        width: 215px;
-        height: auto;
-      }
-
-      .sidebar.sidebar--no-avatar {
-        padding-top: 16px;
-      }
-
-      .avatar {
-        display: inline-block;
-        padding: 0;
-        margin: 0 0 0 9px;
-        height: 155px;
-        width: 155px;
-        border-radius: 50%;
-        background-size: cover !important;
-      }
-
-      .sidebar--data {
-        display: block;
-      }
-
-      .sidebar--title {
-        font-size: 15px;
-        font-style: normal;
-        padding: 20px 0 11px 0;
-        margin: 0 0 10px 0;
-        page-break-inside: avoid;
-        border-bottom: 1px solid #fff;
-      }
-
-      .sidebar--title span {
-        font-weight: 400;
-        font-style: normal;
-        margin-right: 0px;
-      }
-
-      .sidebar--title svg {
-        position: relative;
-        top: 4px;
-        margin-right: 4px;
-      }
-
-      .sidebar--label {
-        font-weight: 600;
-      }
-
-      .sidebar--list {
-        display: block;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .sidebar--item {
-        display: block;
-        list-style: none;
-        font-size: 12px;
-        margin: 0;
-        page-break-inside: avoid;
-        padding: 8px 5px 0 0;
-      }
-
-      .sidebar--item:last-child {
-        padding-bottom: 0;
-      }
-
-      .sidebar--item-text {
-        line-height: 21px;
-      }
-
-      .sidebar--item-align-right {
-        float: right;
-        margin-right: 20px;
-      }
-
-      .c--434a54 .sidebar--bg,
-      .c--434a54 .skills--level-filler {
-        background: #434a54 !important;
-      }
-
-      .c--efa100 .sidebar--bg,
-      .c--efa100 .skills--level-filler {
-        background: #efa100 !important;
-      }
-
-      .c--3f6592 .sidebar--bg,
-      .c--3f6592 .skills--level-filler {
-        background: #3f6592 !important;
-      }
-
-      .c--d770ad .sidebar--bg,
-      .c--d770ad .skills--level-filler {
-        background: #d770ad !important;
-      }
-
-      .c--da4453 .sidebar--bg,
-      .c--da4453 .skills--level-filler {
-        background: #da4453 !important;
-      }
-
-      strong {
-        white-space: nowrap;
-      }
-    </style>
-    <!-- ./css -->
-  </head>
-  <body class="c--434a54 vsc-initialized">
-    <div class="sidebar--bg"></div>
-    <aside class="sidebar  ">
-      <div class="avatar" style="background:url('https://cvmaker-storage.s3.eu-west-3.amazonaws.com/img/avatar/aedd8c8cc4ca261b8d54162308f2b9f41c51696c.jpg') no-repeat;">&nbsp; </div>
-      <div class="sidebar--data">
-        <h2 class="sidebar--title"> KİŞİSEL </h2>
-        <ul class="sidebar--list">
-          <li class="sidebar--item">
-            <span class="sidebar--label">İsim</span>
-            <br> Özgür Doruklu
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Adres</span>
-            <br> Altayçeşme Mah. Tunç Sok. No:24/3 Maltepe İstanbul
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Telefon numarası</span>
-            <br> +90-506-737-68-45
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">E-posta</span>
-            <br> ozgurdoruklu@gmail.com
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Doğum tarihi</span>
-            <br> 22-07-1988
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Doğum yeri</span>
-            <br> Fatih
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Cinsiyet</span>
-            <br> Erkek
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Askerlik Durumu</span>
-            <br> Yapıldı
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Medeni durum</span>
-            <br> Evli
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Sürücü ehliyeti</span>
-            <br> B
-          </li>
-        </ul>
-      </div>
-      <div class="sidebar--data">
-        <h2 class="sidebar--title"> İlgi Alanları </h2>
-        <ul class="sidebar--list">
-          <li class="sidebar--item">
-            <span class="sidebar--label">Dijital ve Mekanik her türlü cihazın çalışma sistematiğini incelemek</span>
-          </li>
-          <li class="sidebar--item">
-            <span class="sidebar--label">Unity ile oyun mekaniği ve üç boyutlu nesneler üzerinde çalışmak</span>
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <section class="sections">
-      <div class="section--name">
-        <h1> Özgür Doruklu </h1>
-      </div>
-      <div class="section">
-        <div class="section section--summary">
-          <div class="section--content">
-            <p>&nbsp;Bugüne kadar dahil olduğum tüm çalışmalarda bağlı bulunduğum firmanın sahip olduğu deneyim ve kaliteyi kişisel gelişimim için bir fırsat olarak değerlendirdim. Bu sayede kurumsal şirket hedeflerine yönelik ilerleme sağlarken kişisel gelişimimi de devam ettirebilmiş oldum. Bundan sonraki hedeflerimde de parçası olduğum ekibin kurumsal hedeflerine ulaşabilmesinde rol almak ve kişisel gelişimimi sürdürebilmek olacaktır.</p>
-            <p>
-              <br>
-            </p>
-            <p>&nbsp;Bulunduğum projelerde çeşitli rollerde bulundum.</p>
-            <p>
-              <br>
-            </p>
-            <p>&nbsp;Geliştirici rolü üstlendiğim projelerde kendi görevlerim yanısıra projedeki diğer arkadaşlarım için yeni bakış açıları kazandıracak, yaptığımız işi sorunsuz şekilde iyi bir seviyeye taşıyacak çeşitli çalışmalar gerçekleştirdim. Çalışma mantığındaki bu iyileşmeler ekibin daha hızlı ürün çıkarmasını sağlamanın yanı sıra çalışmayı daha keyifli hale getirdi ve kişilerde oluşan proje stresini azalttı.</p> 
-			<p>
-              <br>
-            </p>
-            <p>&nbsp;Müşteri ile geliştirici arasında hem teknik hem iş analisti rolü üstlendiğim projelerde de bulundum. Proje takvimini gözeterek müşterinin isterlerini yönetirken sürecin netleştirilmesi, uygulamaya entegrasyonu, devreye alımı konularında aktif rol aldım.</p>
-          </div>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <!-- ./fonts -->
+  <!-- css -->
+  <style type="text/css">
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    html[lang=nl] .sidebar {
+      padding-left: 15px;
+    }
+
+    html[lang=nl] .sidebar--label {
+      display: inline-block;
+      width: 100%;
+      max-width: 106px;
+      margin-top: -2px;
+    }
+
+    html[lang=nl] .sidebar--item-align-right {
+      display: inline-block;
+      margin-right: 10px;
+      width: 60px;
+      text-align: right;
+    }
+
+    body {
+      width: 21cm;
+      height: 100%;
+      min-height: 29.7cm;
+      position: relative;
+      margin: 0;
+      padding: 0 0;
+      color: #333333;
+      line-height: 22px;
+      font: 12px "Helvetica", Arial;
+      font-style: normal;
+    }
+
+    h1 {
+      font-style: normal;
+      font-size: 30px;
+      margin: 0 0 20px 0;
+      padding: 13px 0 15px 0;
+      font-weight: 600;
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    h1 span {
+      position: relative;
+      font-style: normal;
+      display: inline;
+      margin-right: 1px;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      max-width: 430px;
+    }
+
+    p {
+      color: #4c4c4c;
+      line-height: 18px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: #d2d2d2;
+    }
+
+    .section--first-name {
+      display: inline-block;
+    }
+
+    .section--last-name {
+      display: inline-block;
+      position: relative;
+      left: 5px;
+    }
+
+    .sections {
+      left: 235px;
+      position: relative;
+      width: 535px;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      padding: 0;
+    }
+
+    .section p {
+      display: block;
+      font-style: normal;
+    }
+
+    .section:last-child {
+      border: none;
+    }
+
+    .section.section--summary {
+      margin-top: -10px;
+    }
+
+    .section--title {
+      display: block;
+      position: relative;
+      z-index: 99;
+      margin: 0 0 0 0;
+      font-weight: 600;
+      background: #fff;
+      padding: 15px 0 15px 0;
+      page-break-inside: avoid;
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    .section--title span {
+      display: inline-block;
+      margin-right: 0px;
+    }
+
+    .section--heading-group {
+      display: block;
+      padding: 15px 0 0 0;
+      margin: 0;
+      /*page-break-inside: avoid;*/
+    }
+
+    .section--list {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--list.skills {
+      padding-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .section--item {
+      display: block;
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--item.skills {
+      display: inline-block;
+      padding-top: 8px;
+      padding-bottom: 0;
+      width: 100%;
+      margin: 0;
+      padding-left: 5px;
+    }
+
+    .section--item.skills h3 {
+      font-size: 13px;
+    }
+
+    .section--item.skills:last-child {
+      padding-bottom: 0;
+    }
+
+    .skills--label {
+      display: inline-block;
+      width: 175px;
+      margin: 5px 0 0 -5px;
+    }
+
+    .skills--level {
+      display: inline-block;
+      position: relative;
+      top: 0;
+      height: 7px;
+      width: 150px;
+      padding: 0;
+      margin: 0;
+      background: #eaeaea;
+      border-radius: 6px;
+    }
+
+    .skills--level-filler {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #b1b1b1;
+      border-radius: 6px;
+    }
+
+    .skills--stars {
+      display: inline-block;
+      position: relative;
+      top: 4px;
+    }
+
+    .skills--stars svg {
+      fill: #b1b1b1;
+    }
+
+    .skills--stars svg.active {
+      fill: #2b2b38;
+    }
+
+    .section--date {
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 16px;
+      width: 125px;
+      width: 142px;
+      font-size: 13px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--heading {
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--sub-heading {
+      display: block;
+      padding: 3px 0 0 0;
+      margin: 0;
+      font-style: italic;
+      font-size: 13px;
+    }
+
+    .section--content {
+      display: block;
+      padding: 5px 0 0 0;
+      margin: 0;
+    }
+
+    .section--content p {
+      display: block;
+    }
+
+    .section--content ul,
+    .section--content ol {
+      white-space: normal;
+      font-weight: 400;
+      list-style-position: outside;
+      color: #4c4c4c;
+      margin: 0;
+      padding: 0 0 0 16px;
+      text-align: left;
+    }
+
+    .section--content ul li,
+    .section--content ol li {
+      line-height: 18px;
+    }
+
+    .section--content ul li strong,
+    .section--content ol li strong {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .section--content ul li {
+      list-style-type: disc;
+    }
+
+    .section--content ol {
+      padding-left: 14px;
+    }
+
+    .section--content-single-textarea {
+      padding-top: 10px;
+    }
+
+    .sidebar--bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 215px;
+      background: #2b2b38;
+      height: 18000px;
+    }
+
+    .sidebar {
+      left: 0;
+      position: absolute;
+      color: #fff;
+      padding: 29px 0 0 20px;
+      width: 215px;
+      height: auto;
+    }
+
+    .sidebar.sidebar--no-avatar {
+      padding-top: 16px;
+    }
+
+    .avatar {
+      display: inline-block;
+      padding: 0;
+      margin: 0 0 0 9px;
+      height: 155px;
+      width: 155px;
+      border-radius: 50%;
+      background-size: cover !important;
+    }
+
+    .sidebar--data {
+      display: block;
+    }
+
+    .sidebar--title {
+      font-size: 15px;
+      font-style: normal;
+      padding: 20px 0 11px 0;
+      margin: 0 0 10px 0;
+      page-break-inside: avoid;
+      border-bottom: 1px solid #fff;
+    }
+
+    .sidebar--title span {
+      font-weight: 400;
+      font-style: normal;
+      margin-right: 0px;
+    }
+
+    .sidebar--title svg {
+      position: relative;
+      top: 4px;
+      margin-right: 4px;
+    }
+
+    .sidebar--label {
+      font-weight: 600;
+    }
+
+    .sidebar--list {
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar--item {
+      display: block;
+      list-style: none;
+      font-size: 12px;
+      margin: 0;
+      page-break-inside: avoid;
+      padding: 8px 5px 0 0;
+    }
+
+    .sidebar--item:last-child {
+      padding-bottom: 0;
+    }
+
+    .sidebar--item-text {
+      line-height: 21px;
+    }
+
+    .sidebar--item-align-right {
+      float: right;
+      margin-right: 20px;
+    }
+
+    .c--434a54 .sidebar--bg,
+    .c--434a54 .skills--level-filler {
+      background: #434a54 !important;
+    }
+
+    .c--efa100 .sidebar--bg,
+    .c--efa100 .skills--level-filler {
+      background: #efa100 !important;
+    }
+
+    .c--3f6592 .sidebar--bg,
+    .c--3f6592 .skills--level-filler {
+      background: #3f6592 !important;
+    }
+
+    .c--d770ad .sidebar--bg,
+    .c--d770ad .skills--level-filler {
+      background: #d770ad !important;
+    }
+
+    .c--da4453 .sidebar--bg,
+    .c--da4453 .skills--level-filler {
+      background: #da4453 !important;
+    }
+
+    strong {
+      white-space: nowrap;
+    }
+  </style>
+  <!-- ./css -->
+</head>
+
+<body class="c--434a54 vsc-initialized">
+  <div class="sidebar--bg"></div>
+  <aside class="sidebar  ">
+    <div class="avatar"
+      style="background:url('https://cvmaker-storage.s3.eu-west-3.amazonaws.com/img/avatar/aedd8c8cc4ca261b8d54162308f2b9f41c51696c.jpg') no-repeat;">
+      &nbsp; </div>
+    <div class="sidebar--data">
+      <h2 class="sidebar--title"> KİŞİSEL </h2>
+      <ul class="sidebar--list">
+        <li class="sidebar--item">
+          <span class="sidebar--label">İsim</span>
+          <br> Özgür Doruklu
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Adres</span>
+          <br> Altayçeşme Mah. Tunç Sok. No:24/3 Maltepe İstanbul
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Telefon numarası</span>
+          <br> +90-506-737-68-45
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">E-posta</span>
+          <br> ozgurdoruklu@gmail.com
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Doğum tarihi</span>
+          <br> 22-07-1988
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Doğum yeri</span>
+          <br> Fatih
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Cinsiyet</span>
+          <br> Erkek
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Askerlik Durumu</span>
+          <br> Yapıldı
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Medeni durum</span>
+          <br> Evli
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Sürücü ehliyeti</span>
+          <br> B
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar--data">
+      <h2 class="sidebar--title"> İlgi Alanları </h2>
+      <ul class="sidebar--list">
+        <li class="sidebar--item">
+          <span class="sidebar--label">Dijital ve Mekanik her türlü cihazın çalışma sistematiğini incelemek</span>
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Unity ile oyun mekaniği ve üç boyutlu nesneler üzerinde çalışmak</span>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <section class="sections">
+    <div class="section--name">
+      <h1> Özgür Doruklu </h1>
+    </div>
+    <div class="section">
+      <div class="section section--summary">
+        <div class="section--content">
+          <p>&nbsp;Bugüne kadar dahil olduğum tüm çalışmalarda bağlı bulunduğum firmanın sahip olduğu deneyim ve
+            kaliteyi kişisel gelişimim için bir fırsat olarak değerlendirdim. Bu sayede kurumsal şirket hedeflerine
+            yönelik ilerleme sağlarken kişisel gelişimimi de devam ettirebilmiş oldum. Bundan sonraki hedeflerimde de
+            parçası olduğum ekibin kurumsal hedeflerine ulaşabilmesinde rol almak ve kişisel gelişimimi sürdürebilmek
+            olacaktır.</p>
+          <p>
+            <br>
+          </p>
+          <p>&nbsp;Geliştirici rolü üstlendiğim projelerde kendi görevlerim yanısıra projedeki diğer arkadaşlarım için
+            yeni bakış açıları kazandıracak, yaptığımız işi sorunsuz şekilde iyi bir seviyeye taşıyacak çeşitli
+            çalışmalar gerçekleştirdim. Çalışma mantığındaki bu iyileşmeler ekibin daha hızlı ürün çıkarmasını
+            sağlamanın yanı sıra çalışmayı daha keyifli hale getirdi ve kişilerde oluşan proje stresini azalttı.</p>
+          <p>
+            <br>
+          </p>
+          <p>&nbsp;Müşteri ile geliştirici arasında hem teknik hem iş analisti rolü üstlendiğim projelerde de bulundum.
+            Proje takvimini gözeterek müşterinin isterlerini yönetirken sürecin netleştirilmesi, uygulamaya
+            entegrasyonu, devreye alımı konularında aktif rol aldım.</p>
         </div>
       </div>
-      <div class="section">
-        <div class="section--title">
-          <h2> Eğitim ve Nitelikler </h2>
-        </div>
-        <ol class="section--list">
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> Eyl 2006 - Nis 2013 </div>
-              <div class="section--heading">
-                <h3>Matematik Mühendisliği</h3>
-              </div>
-              <div class="section--sub-heading"> Yıldız Teknik Üniversitesi, İstanbul </div>
-              <div class="section--content">
-                <p>&nbsp;Bachelor Degree programı olan lisans eğitimimde yazılım, algoritma, veri yönetimi dersleri yanı sıra Oyunlar Teorisi, Olasılık Teorisi, Soyut Cebir gibi dersler sayesinde analitik düşünme, problem çözme ve kavramlar arası ilişki kurma konularında kendimi geliştirme fırsatı yakaladım.</p>
-              </div>
-            </div>
-          </li>
-        </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2> Eğitim ve Nitelikler </h2>
       </div>
-	  <div class="section">
-        <div class="section--title">
-          <h2> Sertifikalar </h2>
-        </div>
-        <ol class="section--list">
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> Oca 2012 - Haz 2012 </div>
-              <div class="section--heading">
-                <h3>MCPD (500 Saat)</h3>
-              </div>
-              <div class="section--sub-heading">GFN & Bahçeşehir Üniversitesi Wissen Akademie</div>
-              <div class="section--content">
-                <p>&nbsp;Yazılım geliştirme uzmanı olmak amacıyla .NET Framework tabanlı oluşturulmuş program sayesinde bir uygulamanın sıfırdan geliştirilmesi ve kullanıma sunulması konularında bilgi sahibi oldum.</p>
-              </div>
-            </div>
-          </li>
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> Haz 2011 - Kas 2011 </div>
-              <div class="section--heading">
-                <h3>MCITP (450 Saat)</h3>
-              </div>
-              <div class="section--sub-heading">Mikrosis Bilgisayar Eğitim Merkezi</div>
-              <div class="section--content">
-                <p>&nbsp;Başta Windows ve Debian OS olmak üzere bir çok işletim sistemini temel alan program sayesinde DNS, Active Directory, Group Policy, IIS gibi temel bileşenlerin çalışma sistematiği hakkında kendimi geliştirme fırsatı buldum.</p>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="section">
-        <div class="section--title">
-          <h2> İş deneyimi </h2>
-        </div>
-        <div class="section--time-line-overlay"></div>
-        <ol class="section--list">
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date">Oca 2014 - Halen</div>
-              <div class="section--heading">
-                <h3>Yazılım Danışmanı</h3>
-              </div>
-              <div class="section--sub-heading"> Ray Bilişim - Arçelik A.Ş., İstanbul </div>
-            </div>
-            <div class="section--content">
-              <p>&nbsp;Arçelik A.Ş.nin tedarik zinciri, tüketici hizmetleri, muhasebe, çağrı merkezi, yedek parça gibi birçok departmanının BT ihtiyaçlarını karşılayan ve çeşitli teknolojilerle gerçeklenen yazılım projelerinde analiz, geliştirme, test edilme, devreye alım süreçlerinde uçtan uca aktif görev aldım.</p>
-              <br>
-			  <p>&nbsp;Ayrıca parçası olduğum veya ekosisteme dahil olan diğer projelerin bakım sürecinde hata düzeltme ve gereksinime bağlı ek geliştirmeler yapılması iş tanımımda yer almaktadır.</p>
-            </div>
-          </li>
+      <ol class="section--list">
         <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date">Haz 2012 - Mar 2013</div>
-              <div class="section--heading">
-                <h3>CRM Uzmanı</h3>
-              </div>
-              <div class="section--sub-heading"> Yapı Kredi Bankası, İstanbul </div>
+          <div class="section--heading-group">
+            <div class="section--date"> Eyl 2006 - Nis 2013 </div>
+            <div class="section--heading">
+              <h3>Matematik Mühendisliği</h3>
             </div>
+            <div class="section--sub-heading"> Yıldız Teknik Üniversitesi, İstanbul </div>
             <div class="section--content">
-              <p>&nbsp;Bankanın ürün pazarlaması sırasında iletişim kurulacak hedef kitle tespiti, iletişim kurulması ve sonrasında sonuçların raporlanması ve analizi süreçlerinin bir parçası oldum.</p>
-              <br>
-			  <p>&nbsp;Çalıştığım dönemde BT ile devam eden veri analiz sistem güncelleme çalışmalarında da aktif rol aldım.</p>
+              <p>&nbsp;Bachelor Degree programı olan lisans eğitimimde yazılım, algoritma, veri yönetimi dersleri yanı
+                sıra Oyunlar Teorisi, Olasılık Teorisi, Soyut Cebir gibi dersler sayesinde analitik düşünme, problem
+                çözme ve kavramlar arası ilişki kurma konularında kendimi geliştirme fırsatı yakaladım.</p>
             </div>
-          </li>
-        </ol>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2> Sertifikalar </h2>
       </div>
-      <div class="section">
-        <div class="section--title">
-          <h2> Beceriler </h2>
-        </div>
-        <div class="section--time-line-overlay"></div>
-        <ol class="section--list skills">
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>React JS</h3>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date"> Oca 2012 - Haz 2012 </div>
+            <div class="section--heading">
+              <h3>MCPD (500 Saat)</h3>
             </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
+            <div class="section--sub-heading">GFN & Bahçeşehir Üniversitesi Wissen Akademie</div>
+            <div class="section--content">
+              <p>&nbsp;Yazılım geliştirme uzmanı olmak amacıyla .NET Framework tabanlı oluşturulmuş program sayesinde
+                bir uygulamanın sıfırdan geliştirilmesi ve kullanıma sunulması konularında bilgi sahibi oldum.</p>
             </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>AngularJs</h3>
+          </div>
+        </li>
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date"> Haz 2011 - Kas 2011 </div>
+            <div class="section--heading">
+              <h3>MCITP (450 Saat)</h3>
             </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
+            <div class="section--sub-heading">Mikrosis Bilgisayar Eğitim Merkezi</div>
+            <div class="section--content">
+              <p>&nbsp;Başta Windows ve Debian OS olmak üzere bir çok işletim sistemini temel alan program sayesinde
+                DNS, Active Directory, Group Policy, IIS gibi temel bileşenlerin çalışma sistematiği hakkında kendimi
+                geliştirme fırsatı buldum.</p>
             </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>Html5</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>CSS3</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>EcmaScript6</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>Xslt</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>.Net Frameworks(2.0 - Core*)</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>MS-SQL</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>Bootstrap</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>Azure</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>GitHub, TFS</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>VB.Net</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>C#</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-          <li class="section--item skills">
-            <div class="skills--label">
-              <h3>PL-SQL</h3>
-            </div>
-            <div class="skills--level">
-              <div class="skills--level-filler" style="width:100%;"></div>
-            </div>
-          </li>
-        </ol>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2> İş deneyimi </h2>
       </div>
-      <div class="section">
-        <div class="section--title">
-          <h2> Referanslar </h2>
-        </div>
-        <div class="section--time-line-overlay"></div>
-        <ol class="section--list">
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> Yapı Kredi Bankası </div>
-              <div class="section--heading">
-                <h3>Çetin Melet</h3>
-              </div>
-              <div class="section--sub-heading"> +905424136874 <br> cetin.melet@yapikredi.com.tr </div>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">Oca 2014 - Halen</div>
+            <div class="section--heading">
+              <h3>Yazılım Danışmanı</h3>
             </div>
-          </li>
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> adesso Turkey Bilgi Teknolojileri </div>
-              <div class="section--heading">
-                <h3>Nihat Önder</h3>
-              </div>
-              <div class="section--sub-heading"> +905377316804 <br> nihat.onder@adesso.com.tr </div>
+            <div class="section--sub-heading"> Ray Bilişim - Arçelik A.Ş., İstanbul </div>
+          </div>
+          <div class="section--content">
+            <p>&nbsp;Arçelik A.Ş.nin tedarik zinciri, tüketici hizmetleri, muhasebe, çağrı merkezi, yedek parça gibi
+              birçok departmanının BT ihtiyaçlarını karşılayan ve çeşitli teknolojilerle gerçeklenen yazılım
+              projelerinde analiz, geliştirme, test edilme, devreye alım süreçlerinde uçtan uca aktif görev aldım.</p>
+            <br>
+            <p>&nbsp;Ayrıca parçası olduğum veya ekosisteme dahil olan diğer projelerin bakım sürecinde hata düzeltme ve
+              gereksinime bağlı ek geliştirmeler yapılması iş tanımımda yer almaktadır.</p>
+          </div>
+        </li>
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">Haz 2012 - Mar 2013</div>
+            <div class="section--heading">
+              <h3>CRM Uzmanı</h3>
             </div>
-          </li>
-          <li class="section--item">
-            <div class="section--heading-group">
-              <div class="section--date"> Token Finansal Teknolojiler </div>
-              <div class="section--heading">
-                <h3>Halil Öztürk</h3>
-              </div>
-              <div class="section--sub-heading"> +905325133375 <br> halil.ozturk@tokeninc.com </div>
-            </div>
-          </li>
-        </ol>
+            <div class="section--sub-heading"> Yapı Kredi Bankası, İstanbul </div>
+          </div>
+          <div class="section--content">
+            <p>&nbsp;Bankanın ürün pazarlaması sırasında iletişim kurulacak hedef kitle tespiti, iletişim kurulması ve
+              sonrasında sonuçların raporlanması ve analizi süreçlerinin bir parçası oldum.</p>
+            <br>
+            <p>&nbsp;Çalıştığım dönemde BT ile devam eden veri analiz sistem güncelleme çalışmalarında da aktif rol
+              aldım.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2> Beceriler </h2>
       </div>
-      </section>
-  </body>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list skills">
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>React JS</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>AngularJs</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Html5</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>CSS3</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>EcmaScript6</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Xslt</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>.Net Frameworks(2.0 - Core*)</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>MS-SQL</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Bootstrap</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Azure</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>GitHub, TFS</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>VB.Net</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>C#</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>PL-SQL</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2> Referanslar </h2>
+      </div>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date"> Yapı Kredi Bankası </div>
+            <div class="section--heading">
+              <h3>Çetin Melet</h3>
+            </div>
+            <div class="section--sub-heading"> +905424136874 <br> cetin.melet@yapikredi.com.tr </div>
+          </div>
+        </li>
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date"> adesso Turkey Bilgi Teknolojileri </div>
+            <div class="section--heading">
+              <h3>Nihat Önder</h3>
+            </div>
+            <div class="section--sub-heading"> +905377316804 <br> nihat.onder@adesso.com.tr </div>
+          </div>
+        </li>
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date"> Token Finansal Teknolojiler </div>
+            <div class="section--heading">
+              <h3>Halil Öztürk</h3>
+            </div>
+            <div class="section--sub-heading"> +905325133375 <br> halil.ozturk@tokeninc.com </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</body>
+
 </html>
